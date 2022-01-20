@@ -86,8 +86,7 @@ router.delete("/:id", verifyTokenAndAdmin, async (req, res) => {
   try {
     const user = await User.findByIdAndDelete(req.params.id);
 
-    const { password, ...others } = user._doc;
-    res.status(200).json({ ...others });
+    res.status(200).json("User deleted");
   } catch (err) {
     return res.status(500).json(err);
   }
