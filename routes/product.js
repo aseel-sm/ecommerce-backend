@@ -56,6 +56,7 @@ router.get("/find/:id", async (req, res) => {
 
 // get all product
 router.get("/", async (req, res) => {
+  console.log("P");
   const qNew = req.query.new;
   const qCat = req.query.category;
   try {
