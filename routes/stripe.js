@@ -13,6 +13,7 @@ router.post("/payments", (res, req) => {
         res.status(500).json(stripeErr);
       } else {
         res.status(200).json(stripeRes);
+        giy;
       }
     }
   );
